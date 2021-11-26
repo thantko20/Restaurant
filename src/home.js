@@ -1,3 +1,5 @@
+import HomeImage from '../assets/img/home_page.jpg';
+
 function createLogo() {
   const h1Element = document.createElement('h1');
   h1Element.classList.add('logo');
@@ -25,14 +27,40 @@ function createHeaderLinks() {
 }
 
 function createHeader() {
-  const body = document.body;
-
   const header = document.createElement('div');
   header.classList.add('header');
 
   header.append(createLogo(), createHeaderLinks());
 
-  body.insertBefore(header, body.firstChild);
+  return header;
 }
 
-export {createHeader};
+function createIntro() {
+  const body = document.body;
+
+  const introContainer = document.createElement('div');
+  introContainer.classList.add('intro');
+
+  const introImage = new Image();
+  introImage.src = HomeImage;
+  console.log(introImage)
+
+  introContainer.appendChild(introImage);
+
+  return introContainer;
+}
+
+function createFooter() {
+  const footer = document.createElement('footer');
+  footer.innerText = 'Created By Thant Ko Zaw';
+
+  return footer;
+}
+
+function createHomepage() {
+  const body = document.body;
+
+  body.append(createHeader(), createIntro(), createFooter());
+}
+
+export {createHomepage};

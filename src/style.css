@@ -1,0 +1,7 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: url('../assets/img/pasta.jpg');
+}

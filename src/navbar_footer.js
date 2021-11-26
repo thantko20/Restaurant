@@ -1,3 +1,5 @@
+const body = document.body;
+
 function createLogo() {
   const h1Element = document.createElement('h1');
   h1Element.classList.add('logo');
@@ -30,14 +32,14 @@ function createHeader() {
 
   header.append(createLogo(), createHeaderLinks());
 
-  return header;
+  body.insertBefore(header, body.firstChild);
 }
 
 function createFooter() {
   const footer = document.createElement('footer');
   footer.innerText = 'Created By Thant Ko Zaw';
 
-  return footer;
+  body.appendChild(footer);
 }
 
 export {createHeader, createFooter};

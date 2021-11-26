@@ -14,15 +14,15 @@ function createHeaderLinks() {
 
   const homeLink = document.createElement('li');
   homeLink.innerText = 'Home';
-  homeLink.classList.add('link');
+  homeLink.classList.add('link', 'home');
 
   const menuLink = document.createElement('li');
   menuLink.innerText = 'Menu';
-  menuLink.classList.add('link');
+  menuLink.classList.add('link', 'menulink');
 
   const contactLink = document.createElement('li');
   contactLink.innerText = 'Contact';
-  contactLink.classList.add('link');
+  contactLink.classList.add('link', 'contact');
 
   linksContainer.append(homeLink, menuLink, contactLink);
 

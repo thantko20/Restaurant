@@ -36,18 +36,14 @@ function createHeader() {
 }
 
 function createIntro() {
-  const body = document.body;
-
-  const introContainer = document.createElement('div');
-  introContainer.classList.add('intro');
+  const content = document.getElementById('content');
 
   const introImage = new Image();
   introImage.src = HomeImage;
-  console.log(introImage)
 
-  introContainer.appendChild(introImage);
+  content.appendChild(introImage);
 
-  return introContainer;
+  return content;
 }
 
 function createFooter() {
@@ -60,7 +56,9 @@ function createFooter() {
 function createHomepage() {
   const body = document.body;
 
-  body.append(createHeader(), createIntro(), createFooter());
+  body.insertBefore(createHeader(), body.firstChild);
+  createIntro();
+  body.appendChild(createFooter());
 }
 
 export {createHomepage};

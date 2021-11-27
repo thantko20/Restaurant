@@ -14,7 +14,7 @@ function createHeaderLinks() {
 
   const homeLink = document.createElement('li');
   homeLink.innerText = 'Home';
-  homeLink.classList.add('link', 'home');
+  homeLink.classList.add('link', 'home', 'active');
 
   const menuLink = document.createElement('li');
   menuLink.innerText = 'Menu';

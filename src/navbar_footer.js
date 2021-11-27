@@ -18,7 +18,7 @@ function createHeaderLinks() {
 
   const menuLink = document.createElement('li');
   menuLink.innerText = 'Menu';
-  menuLink.classList.add('link', 'menulink');
+  menuLink.classList.add('link', 'menu');
 
   const contactLink = document.createElement('li');
   contactLink.innerText = 'Contact';

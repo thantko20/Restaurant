@@ -1,6 +1,7 @@
 import './style.css'
 import { createIntro } from './home'
 import { createHeader, createFooter } from './navbar_footer';
+import { createMenu } from './menu';
 
 const initWebsite = (() => {
   createHeader();
@@ -21,6 +22,6 @@ const initWebsite = (() => {
 
     const target = link.target;
     if(target.classList.contains('home')) createIntro();
-    // TODO
+    if(target.classList.contains('menu')) createMenu();
   }
 })();

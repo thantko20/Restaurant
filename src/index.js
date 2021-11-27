@@ -17,9 +17,7 @@ const initWebsite = (() => {
   }));
 
   function toggleActiveLink(link) {
-    navLinks.forEach(tab => {
-      tab === link ? tab.classList.add('active') : tab.classList.remove('active');
-    });
+    navLinks.forEach(tab => tab === link ? tab.classList.add('active') : tab.classList.remove('active'));
   }
 
   function deleteChildren(parent) {

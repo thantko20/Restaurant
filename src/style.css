@@ -21,7 +21,7 @@ div .logo {
   padding: 0;
 
   color: tomato;
-  font-family: 'Italianno';
+  font-family: 'Italianno', sans-serif;
   font-weight: 900;
   font-size: 50px;
 }

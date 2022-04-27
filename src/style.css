@@ -4,16 +4,32 @@
   font-weight: normal;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
   background-image: url('../assets/img/pasta.jpg');
   background-attachment: fixed;
 
   display: flex;
   flex-direction: column;
+}
+
+.header {
+  display: flex;
+  padding: 12px 40px;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  
+  background-color: white;
 }
 
 .logo {
@@ -26,8 +42,12 @@ body {
   font-size: 50px;
 }
 
+nav ul {
+  display: flex;
+  gap: 24px;
+}
+
 ul.links {
-  margin-left: auto;
 
   display: flex;
   gap: 26px;
@@ -42,17 +62,6 @@ li {
 
 li:hover, .active {
   color: tomato;
-}
-
-.header {
-  display: flex;
-  padding: 4px 26px;
-  align-items: center;
-
-  position: sticky;
-  top: 0;
-  
-  background-color: white;
 }
 
 /* Content Wrapper */

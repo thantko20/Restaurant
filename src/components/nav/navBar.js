@@ -10,8 +10,8 @@ const tabs = [
     classList: ['menu'],
   },
   {
-    tabName: 'About',
-    classList: ['about']
+    tabName: 'Contact',
+    classList: ['contact']
   }
 ];
 

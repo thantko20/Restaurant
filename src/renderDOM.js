@@ -1,6 +1,7 @@
 import { header } from './components/header';
 import home from './components/home';
 import menu from './components/menu/menu';
+import contact from './components/contact';
 
 const renderDOM = (function () {
   const body = document.body;
@@ -13,6 +14,14 @@ const renderDOM = (function () {
 
   const renderHome = function () {
     home();
+  };
+
+  const renderMenu = function () {
+    menu();
+  };
+
+  const renderContact = function () {
+    contact();
   };
 
   const renderTab = function (className) {
@@ -28,19 +37,19 @@ const renderDOM = (function () {
   };
 
   const renderContent = function (name) {
+    content.innerHTML = '';
+
     switch (name) {
       case 'home':
-        content.innerHTML = '';
         renderHome();
         break;
 
       case 'menu':
-        content.innerHTML = '';
-        menu();
+        renderMenu();
         break;
 
-      case 'about':
-        //renderAbout();
+      case 'contact':
+        renderContact();
         break;
         
       default:

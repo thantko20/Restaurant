@@ -1,4 +1,4 @@
-export function createContact() {
+const contact = function () {
   const contactHeader = document.createElement('h2');
   contactHeader.innerText = 'Contact';
 
@@ -15,3 +15,5 @@ export function createContact() {
   const content = document.getElementById('content');
   content.append(contactHeader, infoContainer);
 }
+
+export default contact;

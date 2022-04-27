@@ -2,6 +2,7 @@ import { header } from './components/header';
 import home from './components/home';
 import menu from './components/menu/menu';
 import contact from './components/contact';
+import footer from './components/footer';
 
 const renderDOM = (function () {
   const body = document.body;
@@ -16,6 +17,10 @@ const renderDOM = (function () {
   const renderHeader = function () {
     const headerEl = header();
     body.insertBefore(headerEl, body.firstChild);
+  };
+
+  const renderFooter = function () {
+    body.appendChild(footer());
   };
 
   const renderHome = function () {
@@ -66,11 +71,10 @@ const renderDOM = (function () {
   const init = function () {
     renderHeader();
     renderContent('home');
+    renderFooter();
   };
 
   return {
-    renderHeader,
-    renderHome,
     renderTab,
     init,
   };

@@ -7,6 +7,12 @@ const renderDOM = (function () {
   const body = document.body;
   const content = document.getElementById('content');
 
+  const clearContent = function () {
+    while (content.firstChild) {
+      content.firstChild.remove();
+    }
+  };
+
   const renderHeader = function () {
     const headerEl = header();
     body.insertBefore(headerEl, body.firstChild);
@@ -37,7 +43,7 @@ const renderDOM = (function () {
   };
 
   const renderContent = function (name) {
-    content.innerHTML = '';
+    clearContent();
 
     switch (name) {
       case 'home':

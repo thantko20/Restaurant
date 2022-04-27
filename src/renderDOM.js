@@ -1,5 +1,6 @@
 import { header } from './components/header';
 import home from './components/home';
+import menu from './components/menu/menu';
 
 const renderDOM = (function () {
   const body = document.body;
@@ -22,11 +23,34 @@ const renderDOM = (function () {
 
     tabEl.classList.add('active');
     activeEl.classList.remove('active');
+
+    renderContent(className);
+  };
+
+  const renderContent = function (name) {
+    switch (name) {
+      case 'home':
+        content.innerHTML = '';
+        renderHome();
+        break;
+
+      case 'menu':
+        content.innerHTML = '';
+        menu();
+        break;
+
+      case 'about':
+        //renderAbout();
+        break;
+        
+      default:
+        break;
+    }
   };
 
   const init = function () {
     renderHeader();
-    renderHome();
+    renderContent('home');
   };
 
   return {

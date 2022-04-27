@@ -12,7 +12,9 @@ const header = function () {
   const container = document.createElement('header');
   container.className = 'header';
 
-  container.append(logo, navBar);
+  container.append(logo(), navBar());
 
   return container;
 }
+
+export { header };

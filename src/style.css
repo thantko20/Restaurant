@@ -16,7 +16,7 @@ body {
   flex-direction: column;
 }
 
-div .logo {
+.logo {
   margin: 0;
   padding: 0;
 

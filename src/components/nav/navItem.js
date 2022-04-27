@@ -1,5 +1,5 @@
 const navItem = function (name, classList=[]) {
-  classListStr = classList.join(' ');
+  const classListStr = classList.join(' ');
 
   const listEl = document.createElement('li');
   listEl.textContent = name;
